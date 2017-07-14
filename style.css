@@ -1,0 +1,43 @@
+header{
+	border: 3px solid black;
+	font-family: Verdana , cursive;
+	color: blue;
+	background-color: yellow;
+	height: relative;
+	width: 90%;
+	padding: 8px;
+	border-radius: 15px;
+text-align: center;
+text-shadow: 1px 1px 6px #120;
+font-weight: 700px;
+font-size: 500%;}
+body{ background-color: silver;
+ }
+top{ font-size 0.75rem; 
+font-color: yellow;}
+
+h1{ border: 2px solid black;
+border-radius: 10px;
+background-color: blue;
+	margin : relative;
+	font-family: fantasy;
+	color: yellow;
+	width: 250px;
+	text-align: center;
+	font-weight: 400px;
+	text-shadow: 2px 2px 7px #111;
+	font-size: very-large;
+}
+<div class="container">
+
+h2 { border: 2px ; 
+border-style: groove;
+background-color: green;
+	margin: relative;
+	font-family:block;
+	color: red;
+	width: 114px;
+	text-align:center;
+	font-weight: 200px;
+	text-shadow: 1px 2px 4px #222;
+font-size: very-large;}</div>

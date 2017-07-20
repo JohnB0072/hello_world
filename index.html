@@ -4,29 +4,53 @@
  <meta charset="utf-8" />
  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
  <meta name="viewport" content="width=device-width, initial-scale=1" />
- 
+ <style>
+
+ #box{
+  width:200px;
+  height:200px;
+  background-color:blue;
+  display:none;}</style>
  
 
 </head> 
 
 <body>
-	<p id="arrayString"></p>
+<div id="box"></div>
+
 	
 	
 
 	<script type="text/javascript">
 	
-	var arrayString="";
+	var clickedTime; var createdTime;
 	
+	function makeBox(){
+createdTime=Date.now();	
 	
-	var myArray=["ice cream", "chocolate", "strawberry"];
+    var time=Math.random();
 	
-		for (var i=0; i<myArray.length; i++){
+	time=time*5000;
 	
-	arrayString=arrayString+myArray[i]+"  ";
+	setTimeout(function(){
+	
+	document.getElementById("box").style.display="block";}
+	,time);
 	}
+	document.getElementById("box").onclick=function(){
+	clickedTime=Date.now();
+	reactionTime=(clickedTime-createdTime)/1000
+	alert(reactionTime);
+	this.style.display="none";makeBox();}
+	makeBox();
+	
+	
+	
+	
+	
+	
     
 		
-		document.getElementById("arrayString").innerHTML=arrayString;
+
 		
-		</script></body>
+		</script></body></html>

@@ -5,8 +5,13 @@
  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
  <meta name="viewport" content="width=device-width, initial-scale=1" />
  <style>
+ #circle{float:left;
+ width:150px;
+ height:150px;
+ border-radius:100px;
+ background-color:red;}
 
- #box{
+ #box{float:right;
   width:200px;
   height:200px;
   background-color:blue;
@@ -19,6 +24,8 @@
 
 	<p>Your time: <span id="time"></span></p>
 	
+	<div id="circle"></div>
+	
 	<div id="box"></div>
 
 	
@@ -26,6 +33,18 @@
 
 	<script type="text/javascript">
 	
+	function getRandomColor() {
+		var letters = '0123456789ABCDEF'.split('');
+		var color = '#';
+		for (var i = 0; i < 6; i++) {
+    color += letters[Math.round(Math.random() * 16)];
+  }
+  return color;
+}
+
+
+
+
 	var clickedTime; var createdTime;
 	
 	function makeBox(){
@@ -37,6 +56,8 @@
 	time=time*5000;
 	
 	setTimeout(function(){
+	
+	document.getElementById("box").style.backgroundColor=getRandomColor();
 	
 	document.getElementById("box").style.display="block";}
 	

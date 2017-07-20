@@ -4,43 +4,83 @@
  <meta charset="utf-8" />
  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
  <meta name="viewport" content="width=device-width, initial-scale=1" />
- 
+ <style>
+ #circle{
+ width:150px;
+ height:150px;
+ border-radius:100px;
+ background-color:red;}
+.break{clear:both;}
+ #box{float:left;
+  width:200px;
+  height:200px;
+  background-color:blue;
+  display:none;}</style>
  
 
 </head> 
 
 <body>
-	<p>How many fingers are you holding up?</p>
+
+	<p>Your time: <span id="time"></span></p>
 	
-	<input id="myNumber"/>
+	<div id="circle"></div>
 	
-	<button id="guess">Guess!</button>
+	<div id="box"></div>
+
 	
 	
 
 	<script type="text/javascript">
 	
-	document.getElementById("guess").onclick=function(){
+	function getRandomColor() {
+		var letters = '0123456789ABCDEF'.split('');
+		var color = '#';
+		for (var i = 0; i < 6; i++) {
+    color += letters[Math.round(Math.random() * 16)];
+  }
+  return color;}
+
+
+
+
+	var clickedTime; var createdTime;
 	
-	var gotit=false; var guesses=1; var x;
-  
-  while (gotit==false){
+	function makeBox(){
+
+	createdTime=Date.now();	
 	
-	x=Math.random();
+    var time=Math.random();
 	
-	x=6*x;
+	time=time*5000;
 	
-	x=Math.floor(x);
+	setTimeout(function(){
 	
-	if (document.getElementById("myNumber").value==x){
+	document.getElementById("circle").style.backgroundColor=getRandomColor();
 	
-	gotit=true;
-	}else {
-	guesses++;}
+	document.getElementById("box").style.backgroundColor=getRandomColor();
 	
-	alert("Got it! It was a "+x+". It only took me "+guesses+" guesses!");}
+	document.getElementById("box").style.display="block";}
+	
+	,time);
 	
 	}
+	
+	document.getElementById("box").onclick=function(){
+	
+	clickedTime=Date.now();
+	
+	reactionTime=(clickedTime-createdTime)/1000;
+	
+	document.getElementById("time").innerHTML=reactionTime;
+	
+	this.style.display="none";makeBox();}
+	
+	makeBox();
+	
+	
+	
+	
 	
 	
     

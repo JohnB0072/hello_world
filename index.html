@@ -1,121 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head><title>Learning Javascript</title>
+<head><title>Learning JQuery</title>
  <meta charset="utf-8" />
  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<script type="text/javascript" src="jQuery.min"></script>
  <style>
- .bold{font-weight:bold;}
- body{
- font-family:Verdana;}
- #circle{
- width:150px;
- height:150px;
+ #circle {
+ width:200px;
+ height:200px;
  border-radius:100px;
- background-color:red;
- position:relative;}
-.break{clear:both;}
- #box{float:left;
-  width:200px;
-  height:200px;
-  background-color:blue;
-  display:none;
-  position:relative;}</style>
- 
+ background-color:blue;
+ }
+ .square {width:200px;
+ height:200px;
+ margin-top:12px;
+ background-color:green;}
+ </style>
+</head>
 
-</head> 
+<div id="circle"></div>
 
-<body>
-<h1>Test your reactions!</h1>
-<p>Click on the boxes and circles</p>
-
-<p class="bold">Your Time</p>	<p>Your time: <span id="time">0</span>s</p>
-	
-	<div id="circle"></div>
-	
-	<div id="box"></div>
-
-	
-	
-
-	<script type="text/javascript">
-	
-	function getRandomColor() {
-		var letters = '0123456789ABCDEF'.split('');
-		var color = '#';
-		for (var i = 0; i < 6; i++) {
-    color += letters[Math.round(Math.random() * 16)];
-  }
-  return color;}
+<p>Text text...test test</p>
 
 
-
-
-	var clickedTime; var createdTime;
-	
-	function makeBox(){
-
-	createdTime=Date.now();	
-	
-    var time=Math.random();
-	
-	time=time*5000;
-	
-	setTimeout(function(){
-	
-	if (Math.random()>0.5){
-	
-	document.getElementById("box").style.borderRadius="100px";}
-	
-	else{
-	
-	document.getElementById("box").style.borderRadius="0";}
-	
-	var top=Math.random();
-	
-	top=top*300;
-	
-	var left=Math.random();
-	
-	left=left*800;
-	
-	document.getElementById("circle").style.top=top+"px";
-	
-	document.getElementById("box").style.top=top+"px";
-	
-	document.getElementById("box").style.left=left+"px";
-	
-	document.getElementById("circle").style.backgroundColor=getRandomColor();
-	
-	document.getElementById("box").style.backgroundColor=getRandomColor();
-	
-	document.getElementById("box").style.display="block";
-	
-	createdTime=Date.now();}
-	
-	,time);
-	
-	}
-	
-	document.getElementById("box").onclick=function(){
-	
-	clickedTime=Date.now();
-	
-	reactionTime=(clickedTime-createdTime)/1000;
-	
-	document.getElementById("time").innerHTML=reactionTime;
-	
-	this.style.display="none";makeBox();}
-	
-	makeBox();
-	
-	
-	
-	
-	
-	
-    
-		
-
-		
-		</script></body></html>
+<script>
+$("#circle").click(function() {
+$("p").html("The text is now different");
+});</script></body></html>

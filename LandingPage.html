@@ -31,23 +31,31 @@
  }
  h1{
  text-align:center;
- font-family:cursive;
+ font-family-serif: Georgia, "Times New Roman", Times, serif;
  color:#3133aa;
  padding-top:50px;
  font-size:80px;
- text-shadow:2px 2px 5px yellow;
+ text-shadow:2px 2px 5px #ceec20;
  }
-p{text-shadow:1px 1px 2px white;
+p{
+text-shadow:1px 1px 2px #ceec20;
 font-family:bold;
 padding-top:50px;
-color:#b21717;} </style>
-  
-  <body>
-  
+color:#b21717;
+}
+strong{
+font-size:2.0em;
+}
+.form-control {background-color:blue;}
+.btn-sm{margin-left:265px;}
+ </style>
+ 
+  <body data-spy="scroll"data-target=".navbar-collapse">
+  <div class="container-fluid"id="topContainer">
   <div class="navbar navbar-default ">
   <div class="container">
   <div class="navbar-header">
-		<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<button class="navbar-toggle"data-toggle="collapse" data-target=".navbar-collapse">
   
  
 		<span class="icon-bar"></span>
@@ -55,7 +63,7 @@ color:#b21717;} </style>
 		<span class="icon-bar"></span>
 	</button>
    
-   <a class="navbar-brand">WhoKnows</a>
+   <a class="navbar-brand"><mark>WhoKnows</mark></a>
    
    </div>
    
@@ -63,29 +71,31 @@ color:#b21717;} </style>
 		<ul class="nav navbar-nav">
 			<li> <a href="#HOME">Home</a></li>
 			<li> <a href="#about">About</a></li>
-			<li> <a href="#download">Download</a></li>
+			<li> <a href="#footer">Download</a></li>
    <form class="navbar-form navbar-right">
    <form class="form-group">
    <input type="email" placeholder="Email" class="form-control">
     
 	<input type="password" placeholder="Password" class="form-control">
 	<button type="submit" class="btn btn-success">Log In</button></form>
-	
 	</div></div></div>
-	<div class="container" id="topContainer">
+	
 	<div class=".img-reponsive">
 	<div class="row">
 	<div class="col-md-6 col-md-offset-3" id="topRow">
-<h1>HelloWorld</h1>
+<h1 class="marginTop">HelloWorld</h1>
 	
 	<p class="lead">This is going to be great. This is where we will put stuff.</p>
-	<p class="bold marginTop">This is the heading.</p>
+	<p class="bold marginTop"><strong>Sign Up Now!!</strong></p>
 	<form class="marginTop">
 	
 	<div class="input-group">
 	<span class="input-group-addon">@</span>
-	<input type="email" class="form-control" placeholder="Your Email"></div></form>
-	</div></div>
+	<input type="email" class="form-control" placeholder="Your Email">
+	</div></div></div>
+	
+	<input type="submit" class="btn btn-primary btn-sm"/></div>
+	
   </body>
   
  

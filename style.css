@@ -28,7 +28,7 @@ background-color: blue;
 	text-shadow: 2px 2px 7px #111;
 	font-size: very-large;
 }
-<div class="container">
+
 
 h2 { border: 2px ; 
 border-style: groove;
@@ -40,4 +40,4 @@ background-color: green;
 	text-align:center;
 	font-weight: 200px;
 	text-shadow: 1px 2px 4px #222;
-font-size: very-large;}</div>
+font-size: very-large;}

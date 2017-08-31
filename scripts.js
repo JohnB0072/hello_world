@@ -33,7 +33,11 @@
 	
 	var top=Math.random();
 	
+<<<<<<< HEAD
 	top=top*300;
+=======
+	top=top*200;
+>>>>>>> origin/new
 	
 	var left=Math.random();
 	
